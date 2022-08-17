@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h5 align="center">Введите параметры текста:</h5>
+    <p align="center">Иногда после запуска генерации необходимо подождать несколько секунд.</p>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {% for i in form %}
+            <p align="center">{{ i.label }}</p>
+            <p align="center">{{ i }}</p>
+        {% endfor %}
+        <div align="center">
+            <button class="btn btn-success" type="submit">Готово!</button>
+        </div>
+    </form>
+{% endblock %}

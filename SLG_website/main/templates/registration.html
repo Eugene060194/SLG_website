@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h5 align="center">Регистрация:</h5>
+    <p align="center">Зарегистрированные пользователи могут сохранять сгенерированные тексты.</p>
+    <form method="post">
+        {% csrf_token %}
+        {% for i in form %}
+            <p align="center">{{ i.label }}</p>
+            <p align="center">{{ i }}</p>
+            <div class="text-danger" align="center">
+                {% for error in i.errors %}
+                    <em><b>{{ error }}</b></em>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <br>
+        <div align="center">
+            <button class="btn btn-success" type="submit">Готово!</button>
+        </div>
+    </form>
+    <br>
+    <h5 align="center"><b>{{ res }}</b></h5>
+{% endblock %}

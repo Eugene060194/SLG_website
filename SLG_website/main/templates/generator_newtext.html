@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for q in new_text %}
+        <br>
+        {% for i in q %}
+            <h6 align="center">{{ i }}</h6>
+        {% endfor %}
+    {% endfor %}
+
+    {% if request.user.is_authenticated %}
+        <br>
+        <div align="center">
+            <form method="post">
+                {% csrf_token %}
+                <button class="btn btn-success" type="submit">Сохранить</button>
+            </form>
+        </div>
+    {% endif %}
+    <br>
+    <h5 align="center"><b>{{ res }}</b></h5>
+{% endblock %}
