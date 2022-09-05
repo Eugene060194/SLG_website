@@ -4,3 +4,5 @@ old
 venv
 filtration.py
 заметки.txt
+.htaccess
+passenger_wsgi.py

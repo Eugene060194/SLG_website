@@ -23,7 +23,7 @@ def read_saved_text(directory_path):
     """
     read_texts = []
     for filename in os.listdir(directory_path):
-        with open('{}/{}'.format(directory_path, filename), 'r') as file:
+        with open('{}/{}'.format(directory_path, filename), 'r', encoding='UTF-8') as file:
             read_texts.append(json.load(file))
     return read_texts
 
@@ -37,5 +37,5 @@ def save_text(user, number, text):
     :param text: Текст в формате списка
     :return: -
     """
-    with open('main/savedtexts/{}/usertext_{}.txt'.format(user, number), 'w') as file:
+    with open('main/savedtexts/{}/usertext_{}.txt'.format(user, number), 'w', encoding='UTF-8') as file:
         json.dump(text, file, ensure_ascii=False)

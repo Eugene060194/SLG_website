@@ -18,10 +18,10 @@ def preparing_base(base_file):
     return output
 
 
-BASE_OF_NOUNS = preparing_base(open('main/baseofwords/nouns.txt', 'r', encoding='ANSI'))
-BASE_OF_VERBS = preparing_base(open('main/baseofwords/verbs.txt', 'r', encoding='ANSI'))
-BASE_OF_PRONOUNS = preparing_base(open('main/baseofwords/pronouns.txt', 'r', encoding='ANSI'))
-BASE_OF_ADJECTIVES = preparing_base(open('main/baseofwords/adjectives.txt', 'r', encoding='ANSI'))
+BASE_OF_NOUNS = preparing_base(open('main/baseofwords/nouns.txt', 'r', encoding='UTF-8'))
+BASE_OF_VERBS = preparing_base(open('main/baseofwords/verbs.txt', 'r', encoding='UTF-8'))
+BASE_OF_PRONOUNS = preparing_base(open('main/baseofwords/pronouns.txt', 'r', encoding='UTF-8'))
+BASE_OF_ADJECTIVES = preparing_base(open('main/baseofwords/adjectives.txt', 'r', encoding='UTF-8'))
 
 # Переменная, хранящая правила построения словосочетаний(для куплетов)
 PHRASE_OPTIONS = [
