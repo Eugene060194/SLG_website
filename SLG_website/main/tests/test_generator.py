@@ -6,8 +6,8 @@ from main._generator import preparing_base, Rhyme, CompleteText
 
 class PreparingBaseTest(TestCase):
     def test_1(self):
-        test_var = preparing_base(open('main/baseofwords/nouns.txt', 'r', encoding='ANSI'))
-        with open('main/baseofwords/nouns.txt', 'r', encoding='ANSI') as opened_file:
+        test_var = preparing_base(open('main/baseofwords/nouns.txt', 'r', encoding='UTF-8'))
+        with open('main/baseofwords/nouns.txt', 'r', encoding='UTF-8') as opened_file:
             output = opened_file.readlines()
         for i in range(len(output)):
             output[i] = output[i].replace('\r', '')
